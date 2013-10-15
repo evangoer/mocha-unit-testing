@@ -1,0 +1,25 @@
+{
+  "name": "mocha-test-skeleton",
+  "version": "0.0.0",
+  "description": "Simple skeleton for running mocha + expect.js unit tests in the browser.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "yeti": ">=0.2.24"
+  }, 
+  "scripts": {
+    "test": "node_modules/.bin/yeti test/js/my-component/index.html",
+    "start": "node_modules/.bin/yeti --server"
+  },
+  "keywords": [
+    "test",
+    "skeleton",
+    "template",
+    "mocha",
+    "yeti"
+  ],
+  "author": "Evan Goer",
+  "license": "BSD"
+}
