@@ -29,7 +29,7 @@ It includes the files:
 1. Install Node.js and npm. You can do this using a package manager, or by
    downloading the install file from [NodeJS.org](http://nodejs.org/). 
 2. Use git to clone this repo on your local machine.
-3. Enter the repo directory and type `npm install`. This installs
+3. Enter the repo directory and type `make install`. This installs
    dependencies (mocha, mocha-phantomjs, expect.js, and yeti).
 
 ## Running the tests manually in a single browser
