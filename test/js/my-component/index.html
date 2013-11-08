@@ -15,7 +15,11 @@
     <script src="../../../js/my-component/my-component.js"></script>
     <script src="tests.js"></script>
     <script>
-      mocha.run();
+        if (window.mochaPhantomJS) {
+            mochaPhantomJS.run();
+        } else { 
+            mocha.run();
+        }
     </script>
   </body>
 </html>

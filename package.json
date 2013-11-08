@@ -7,19 +7,21 @@
     "test": "test"
   },
   "devDependencies": {
-    "mocha": ">=1.13.0",
+    "mocha-phantomjs": ">=3.1.6",
+    "phantomjs": ">=1.9.1",
     "expect.js": ">=0.2.0",
     "yeti": ">=0.2.24"
   }, 
   "scripts": {
-    "test": "node_modules/.bin/yeti test/js/my-component/index.html",
-    "start": "node_modules/.bin/yeti --server"
+    "test": "make test",
+    "start": "make start"
   },
   "keywords": [
     "test",
     "skeleton",
     "template",
     "mocha",
+    "phantomjs",
     "yeti"
   ],
   "author": "Evan Goer",
