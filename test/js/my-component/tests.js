@@ -1,7 +1,11 @@
-/*global describe, it, beforeEach, afterEach, expect, appendDiv */
+/*global describe, it, beforeEach, afterEach, chai, appendDiv */
+
+var assert = chai.assert;
 
 describe('The appendDiv() function', function () {
-    var container = document.getElementById('test');
+    var container = document.createElement('div');
+    container.id = 'test';
+    document.body.appendChild(container);
 
     /*
      * Teardown function so that the two tests don't interfere
@@ -11,13 +15,13 @@ describe('The appendDiv() function', function () {
     });
 
     it('can append a div into a container element', function () {
-        expect(container.lastChild).to.not.be.ok();
+        assert.equal(container.lastChild, undefined);
         appendDiv('#test');
-        expect(container.lastChild.tagName).to.be.eql('DIV');
+        assert.equal(container.lastChild.tagName, 'DIVX');
     });
 
     it('returns the div it just appended', function () {
         var div = appendDiv('#test');
-        expect(container.lastChild).to.be.eql(div);
+        assert.equal(container.lastChild, div);
     });
 });
