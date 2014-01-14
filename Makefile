@@ -4,13 +4,9 @@ install:
 	npm install
 
 start:
-	$(BIN)/yeti --server
+	$(BIN)/karma start
 
 test:
-	$(BIN)/mocha-phantomjs test/js/my-component/index.html
+	$(BIN)/karma run
 
-test-hub:
-	$(BIN)/yeti test/js/my-component/index.html
-
-
-.PHONY: start test test-headless
+.PHONY: install start test

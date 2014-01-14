@@ -14,7 +14,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'node_modules/chai/chai.js', include: true},
+      {pattern: 'node_modules/expect.js/expect.js', include: true},
       'js/**/*.js',
       'test/**/*.js'
     ],
@@ -28,7 +28,7 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port
@@ -47,6 +47,14 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
 
+    preprocessors: {
+        'js/**/*.js': 'coverage'
+    },
+
+    coverageReporter: {
+        // cf. http://gotwarlost.github.com/istanbul/public/apidocs/
+        type: 'text-summary'
+    },
 
     // Start these browsers, currently available:
     // - Chrome
