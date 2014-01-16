@@ -1,12 +1,13 @@
-BIN = node_modules/.bin
-
 install:
 	npm install
 
 start:
-	$(BIN)/karma start
+	npm start 
 
 test:
-	$(BIN)/karma run
+	npm test
 
-.PHONY: install start test
+clean:
+	rm -rf node_modules coverage
+
+.PHONY: clean install start test

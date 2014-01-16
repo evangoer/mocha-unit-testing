@@ -1,78 +1,78 @@
 // Karma configuration
 // Generated on Fri Jan 10 2014 17:20:23 GMT-0800 (PST)
 
-module.exports = function(config) {
-  config.set({
+module.exports = function (config) {
+    config.set({
 
-    // base path, that will be used to resolve files and exclude
-    basePath: './',
+        // base path, that will be used to resolve files and exclude
+        basePath: '',
 
-
-    // frameworks to use
-    frameworks: ['mocha'],
-
-
-    // list of files / patterns to load in the browser
-    files: [
-      {pattern: 'node_modules/expect.js/expect.js', include: true},
-      'js/**/*.js',
-      'test/**/*.js'
-    ],
+        // frameworks to use
+        frameworks: ['mocha'],
 
 
-    // list of files to exclude
-    exclude: [
-      
-    ],
+        // list of files / patterns to load in the browser
+        files: [
+            {pattern: 'node_modules/expect.js/expect.js', include: true},
+            'js/**/*.js',
+            'test/**/*.js'
+        ],
 
 
-    // test results reporter to use
-    // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress', 'coverage'],
+        // list of files to exclude
+        exclude: [
+          
+        ],
 
 
-    // web server port
-    port: 9876,
+        // test results reporter to use
+        // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
+        reporters: ['progress', 'coverage'],
 
 
-    // enable / disable colors in the output (reporters and logs)
-    colors: true,
+        // web server port
+        port: 9876,
 
 
-    // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+        // enable / disable colors in the output (reporters and logs)
+        colors: true,
 
 
-    // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
-
-    preprocessors: {
-        'js/**/*.js': 'coverage'
-    },
-
-    coverageReporter: {
-        // cf. http://gotwarlost.github.com/istanbul/public/apidocs/
-        type: 'text-summary'
-    },
-
-    // Start these browsers, currently available:
-    // - Chrome
-    // - ChromeCanary
-    // - Firefox
-    // - Opera (has to be installed with `npm install karma-opera-launcher`)
-    // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
-    // - PhantomJS
-    // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['Chrome'],
+        // level of logging
+        // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+        logLevel: config.LOG_INFO,
 
 
-    // If browser does not capture in given timeout [ms], kill it
-    captureTimeout: 60000,
+        // enable / disable watching file and executing tests whenever any file changes
+        autoWatch: false,
+
+        preprocessors: {
+            'js/**/*.js': 'coverage'
+        },
+
+        coverageReporter: {
+            // cf. http://gotwarlost.github.com/istanbul/public/apidocs/
+            // cf. https://github.com/karma-runner/karma-coverage
+            type: 'lcov'
+        },
+
+        // Start these browsers, currently available:
+        // - Chrome
+        // - ChromeCanary
+        // - Firefox
+        // - Opera (has to be installed with `npm install karma-opera-launcher`)
+        // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
+        // - PhantomJS
+        // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
+        browsers: ['Chrome', 'Firefox'],
 
 
-    // Continuous Integration mode
-    // if true, it capture browsers, run tests and exit
-    singleRun: false
-  });
+        // If browser does not capture in given timeout [ms], kill it
+        captureTimeout: 60000,
+
+
+        // Continuous Integration mode
+        // if true, it capture browsers, run tests and exit
+        singleRun: false
+    });
 };
