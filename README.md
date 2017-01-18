@@ -5,7 +5,7 @@ or headlessly, with tests written in BDD (Behavior Driven Development) style.
 
 It uses:
 
-* [mocha](http://visionmedia.github.io/mocha/) -- a JavaScript test framework
+* [mocha](http://mochajs.org/) -- a JavaScript test framework
   for running tests on Node.js and the browser
 * [expect.js](https://github.com/LearnBoost/expect.js/) -- a small BDD-style
   assertion library
